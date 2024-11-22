@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa; /* Lighter background for a cleaner look */
+}
+
+.wrapper {
+    display: flex;
+}
+
+.main {
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.35s ease-in-out;
+    background-color: #fafbfe; /* Light background similar to Shopee */
+}
+
+#sidebar {
+    width: 16rem;
+    min-width: 16rem;
+    z-index: 1000;
+    transition: all 0.25s ease-in-out;
+    background-color: #f7f7f7; /* Light gray background similar to Shopee */
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #ddd; /* Subtle border to separate sidebar */
+}
+
+#sidebar.expand {
+    width: 260px;
+    min-width: 260px;
+}
+
+.toggle-btn {
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+    padding: 1rem 1.5rem;
+}
+
+.toggle-btn i {
+    font-size: 1.5rem;
+    color: #333; /* Darker color for better contrast */
+}
+
+.sidebar-logo {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.sidebar-logo a {
+    color: #ff5c39; /* Shopee's brand color */
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.sidebar-nav {
+    padding: 2rem 0;
+    flex: 1 1 auto;
+}
+
+a.sidebar-link {
+    padding: .625rem 1.625rem;
+    color: #333; /* Darker text for better readability */
+    border-left: 3px solid transparent;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-link i {
+    font-size: 1.1rem;
+    margin-right: .75rem;
+}
+
+a.sidebar-link:hover {
+    background-color: #ff5c39; /* Shopee orange on hover */
+    color: white; /* White text on hover */
+    border-left: 3px solid white;
+}
+
+#sidebar:not(.expand) .sidebar-item .sidebar-dropdown {
+    position: absolute;
+    top: 0;
+    left: 70px;
+    background-color: #f7f7f7;
+    padding: 0;
+    min-width: 15rem;
+    display: none;
+}
+
+#sidebar:not(.expand) .sidebar-item:hover .has-dropdown+.sidebar-dropdown {
+    display: block;
+    max-height: 15em;
+    width: 100%;
+    opacity: 1;
+}
+
+.tables-list {
+    padding-left: 3rem; /* Thụt vào từ bên trái */
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.tables-list a {
+    color: #333;
+    font-size: 0.9rem;
+    padding: 8px 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+}
+
+.tables-list a:hover {
+    background-color: #f1f1f1;
+}
+
+.database-holder a {
+    color: #333;
+}
+
+.dropdown-menu {
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    list-style-type: none;
+    padding: 10px;
+    margin-top: 5px;
+    z-index: 10;
+}
+
+.dropdown-menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+    background-color: #f0f0f0;
+}
+
+.logout-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-top: 1px solid #ddd;
+}
+
+.logout-btn span {
+    margin-right: auto;
+    font-size: 1.2rem;
+}
+
+.logout-btn i {
+    margin-left: 10px;
+    font-size: 1.3rem;
+}

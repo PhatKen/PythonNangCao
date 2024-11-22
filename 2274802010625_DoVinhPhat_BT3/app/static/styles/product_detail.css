@@ -1,0 +1,180 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5; /* Nền màu xám sáng */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #ff5722; /* Màu cam của Shopee */
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ cho header */
+}
+
+.logo img{
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+}
+
+.row{
+    margin: 0;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+header .cart {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+header .cart i {
+    font-size: 22px;
+}
+
+/* Button Styles */
+.btn-warning {
+    background-color: #ff6a00; /* Tông màu cam giống Shopee */
+    border: none;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-warning:hover {
+    background-color: #e15d00;
+}
+
+
+/* Product Details Container */
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.product-details {
+    display: flex;
+    gap: 20px;
+    background-color: white;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    width: 100%;
+}
+
+.product-details .image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #ddd;
+    padding-right: 20px;
+}
+
+.product-details .image img {
+    max-width: 100%;
+    max-height: 400px;
+    border-radius: 10px;
+    object-fit: contain; /* Đảm bảo hình ảnh không bị méo */
+}
+
+.product-details .info {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.product-details .info h1 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: 600;
+}
+
+.product-details .info .price {
+    font-size: 30px;
+    color: #ff5722; /* Màu cam Shopee */
+    margin: 15px 0;
+    font-weight: 600;
+}
+
+.product-details .info .description {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.product-details .info .actions {
+    display: flex;
+    gap: 20px;
+}
+
+.product-details .info .actions .btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
+}
+
+.product-details .info .actions .btn-buy {
+    background-color: #ff5722;
+    color: white;
+    flex: 1;
+}
+
+.product-details .info .actions .btn-buy:hover {
+    background-color: #e64a19;
+    transform: scale(1.05);
+}
+
+.product-details .info .actions .btn-add {
+    background-color: #f5f5f5;
+    color: #333;
+    border: 1px solid #ddd;
+    flex: 1;
+}
+
+.product-details .info .actions .btn-add:hover {
+    background-color: #ddd;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 30px;
+}
